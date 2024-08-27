@@ -24,7 +24,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          coverage run --source=. -m pytest
+          coverage run --source= . -m pytest
           coverage xml -o coverage.xml
       - uses: actions/checkout@v4
         with:
