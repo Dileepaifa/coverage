@@ -22,11 +22,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install coverage pytest
 
-      - name: Run tests and generate coverage report
-        run: 
+      - name: Run tests with coverage
+        run: |
           coverage run -m pytest
-          coverage report
-          coverage xml
+          coverage xml -o coverage.xml
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
